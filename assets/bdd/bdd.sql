@@ -13,7 +13,7 @@ CREATE TABLE Users
     pass        VARCHAR(64),
     photo       VARCHAR(254),
     birthdate   DATE,
-    status      BOOLEAN DEFAULT true  NOT NULL,
+    status      BOOLEAN DEFAULT true NOT NULL,
     description TEXT,
     isAdmin     BOOLEAN DEFAULT false NOT NULL,
     createdAt   DATE,
@@ -33,7 +33,7 @@ CREATE TABLE Posts
 
 CREATE TABLE Messages
 (
-    idMessage   INT AUTO_INCREMENT,
+    idMessage   INT AUTO_INCREMENT NOT NULL,
     content     TEXT,
     photo       VARCHAR(256),
     dateMessage DATETIME,
