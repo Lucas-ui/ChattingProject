@@ -1,3 +1,6 @@
+<?php
+include("parts/commun.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
