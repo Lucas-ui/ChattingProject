@@ -45,17 +45,17 @@ CREATE TABLE Messages
 );
 
 INSERT INTO Users (pseudo, email, pass, photo, birthdate, status, description, isAdmin, createdAt)
-VALUES ('admin', 'admin@admin.fr', SHA2("admin", 256), null, '2023-07-03', true, 'Administrateur', true, '2023-07-03'),
-       ('Dupont', 'dupont@gmail.fr', SHA2("password", 256),  null, '2023-07-03', true, 'Monsieur Dupont', false, '2023-07-03');
+VALUES ('admin', 'admin@admin.fr', SHA2("admin", 256), 'default_image.png', '2023-07-03', true, 'Administrateur', true, '2023-07-03'),
+       ('Dupont', 'dupont@gmail.fr', SHA2("password", 256),  'default_image.png', '2023-07-03', true, 'Monsieur Dupont', false, '2023-07-03');
 
-INSERT INTO Posts (content, photo, datePost)
-VALUES ('test', null, '2023-07-03'),
-       ('test2', null, '2023-07-03'),
-       ('test3', null, '2023-07-03'),
-       ('test4', null, '2023-07-03');
+INSERT INTO Posts (content, photo, datePost, idUser)
+VALUES ('test', '', '2023-07-03', 1),
+       ('test2', '', '2023-07-03', 1),
+       ('test3', '', '2023-07-03', 2),
+       ('test4', '', '2023-07-03', 2);
 
-INSERT INTO Messages (content, photo, dateMessage)
-VALUES ('message1',null,'2023-07-03'),
-       ('message2',null,'2023-07-03'),
-       ('message3',null,'2023-07-03'),
-       ('message4',null,'2023-07-03');
+INSERT INTO Messages (content, photo, dateMessage, idUser, idPost)
+VALUES ('message1','','2023-07-03', 2, 1),
+       ('message2','','2023-07-03', 2, 2),
+       ('message3','','2023-07-03', 1, 3),
+       ('message4','','2023-07-03', 1, 4);
